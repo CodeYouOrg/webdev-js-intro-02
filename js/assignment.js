@@ -7,29 +7,32 @@ const resolutionElement = document.getElementById("resolution")
 const willMeetResolutionElement = document.getElementById("will-meet-resolution")
 const submissionBtn = document.getElementById("submission-btn")
 
-// Declare your variables here.
+const resolution = "Learn JavaScript"; //immutable variable "resolution"
+const currentYear = "2025";  //immutable variable "currentYear"
+let willMeetResolution = "yes";  //mutable variable "willMeetResolution"
 
 function updateYear() {
-    // Update this function
+    yearElement.innerText = currentYear; //I had trouble here because I did not capitalize the T in text
 
 }
 
 function updateResolution() {
-    // Update this function 
-
+    resolutionElement.innerText = resolution;  //Same here
 }
 
 function updateWillMeetResolution() {
-    // Update this function
+    willMeetResolutionElement.innerText = willMeetResolution;  //Same here
 
 }
 
 function render() {
-    // Update this function
+    updateYear();
+    updateResolution();
+    updateWillMeetResolution();
 
 }
 
-submissionBtn.addEventListener("click", function () {
-    // Update this function
+submissionBtn.addEventListener("click", function () {  //I don't understand why there is not a " ) " here after the word "click"
+    render();
 
 })
